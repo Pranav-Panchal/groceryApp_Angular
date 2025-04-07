@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+/* Make html + body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  /* Full-height flex container */
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* This makes router content expand & push footer down */
+  .content-wrapper {
+    flex: 1;
+  }
+  

@@ -1,0 +1,14 @@
+<h2>Snack Products from OpenFoodFacts</h2>
+
+<p *ngIf="loading">Loading products, please wait...</p>
+
+<ul *ngIf="!loading && products.length > 0">
+  <li *ngFor="let p of products">
+    <strong>{{ p.product_name || 'No Name' }}</strong><br />
+    <span *ngIf="p.brands">Brand: {{ p.brands }}</span><br />
+    <img *ngIf="p.image_front_thumb_url" [src]="p.image_front_thumb_url" width="80" />
+    <hr />
+  </li>
+</ul>
+
+<p *ngIf="!loading && products.length === 0">No products found.</p>

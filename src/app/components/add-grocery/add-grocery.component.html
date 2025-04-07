@@ -1,0 +1,17 @@
+<h3 class="mt-4">Add Grocery</h3>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)" class="mb-4">
+
+  <div class="mb-3">
+    <label>Name:</label>
+    <input type="text" name="name" class="form-control" ngModel #name="ngModel" required />
+    <div *ngIf="name.invalid && name.touched" class="text-danger">Name is required</div>
+  </div>
+
+  <div class="mb-3">
+    <label>Quantity:</label>
+    <input type="number" name="quantity" class="form-control" ngModel #quantity="ngModel" required />
+    <div *ngIf="quantity.invalid && quantity.touched" class="text-danger">Quantity is required</div>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!myForm.valid">Add Grocery</button>
+</form>

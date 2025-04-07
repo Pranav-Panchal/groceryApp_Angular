@@ -1,0 +1,28 @@
+.card {
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+  .hero-section {
+    background: url('../../../assets/hero-bg.jpg') center center / cover no-repeat;
+    min-height: 70vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* transparent overlay */
+    z-index: -1;
+  }
+  
+  
+  
